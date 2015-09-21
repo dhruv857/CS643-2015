@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sending SMS</title>
+    <style>
+        body{
+            background: lightcyan;
+        }
+        div{
+            padding-left: 40%;
+            padding-top: 10%;
+        }
+        dt{
+           font-family: "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+            font-size: 20px;
+        }
+        input{
+           display: block;
+              margin: 0;
+                padding: 10px;
+                border: solid 1px #dcdcdc;
+            transition: box-shadow 0.3s, border 0.3s;
+            border-radius: 5px;
+              font-family: sans-serif;
+              font-size: 18px;
+              appearance: none;
+              box-shadow: none;
+
+
+        }
+        input[type="submit"]
+        {
+           display: block;
+              margin: 0;
+                padding: 10px;
+                border: solid 1px #dcdcdc;
+            transition: box-shadow 0.3s, border 0.3s;
+            border-radius: 5px;
+              font-family: sans-serif;
+            width:241px;
+              font-size: 18px;
+              appearance: none;
+              box-shadow: none;
+
+
+        }
+        input[type="text"].focus {
+              border: solid 1px #707070;
+            border-radius: 5px;
+              box-shadow: 0 0 5px 1px #969696;
+            }
+
+    </style>
+</head>
+<body>
+<div id="f">
+<form action="/t/" method="POST">
+ <dl>
+     <dt>Phone Number</dt>
+     <dd><input type=text name=number placeholder="Phone Number with CC"></dd>
+     <dt>Message</dt>
+     <dd><input type="text" name="message" placeholder="Message to send"></dd>
+     <br>
+     <dd><input type="submit" value=send></dd>
+ </dl>
+</form>
+</div>
+</body>
+</html>
