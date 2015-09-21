@@ -3,11 +3,19 @@ from twilio.rest import TwilioRestClient
 import twilio.twiml
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/",methods=['GET','POST'])
 def hello():
 
 
     return render_template('in.html')
+
+@app.route("/r/",methods=['GET','POST'])
+def hello_monkey():
+
+
+    resp = twilio.twiml.Response()
+    resp.message("Hello!!! This is dhruv testing")
+    return str(resp)
 
 @app.route("/sendsms/")
 def send_page():
